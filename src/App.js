@@ -3,12 +3,10 @@ import React from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar } from "react-bootstrap";
-
 import Home from './pages/Home/Home';
 import Courses from './pages/Courses/Courses';
 import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
-import Register from './pages/Register/Register';
 import Login from "./pages/Login/Login"
 import Contact from './pages/Contact/Contact';
 import ChatBot from 'react-simple-chatbot';
@@ -16,7 +14,48 @@ import ChatBot from 'react-simple-chatbot';
 function App() {
   return (
     <div>
-      <Navbar expand="lg" style={{background:"purple"}}>
+
+<ChatBot 
+    
+      const steps = {[
+  {
+    id: '1',
+    message: 'Hello How Can I Help You!',
+    trigger: "2",
+  },
+  {
+    id: '2',
+    user: true,
+    trigger: '3',
+  },
+  {
+    id: '3',
+    message: `Hello Sir! How Can I Help You!`,
+    trigger: '4',
+  },
+  {
+    id: '4',
+    user: true,
+    trigger: '5',
+  },
+  {
+    id: '5',
+    message: `Educational digital websites are an effective way to improve the learning process, as these platforms provide educational tools and resources that suit students’ individual needs and abilities.
+    Thus, students can access educational content at any time and from anywhere, allowing them to learn`,
+    trigger: '6',
+  },
+  {
+    id: '6',
+    message: 'Thanks to Use ChatBot',
+    end: true,
+  },
+  
+]}
+  floating={true}  
+    />
+
+
+      <Navbar expand="lg" style={{background:"#36394b"}}>
         <Container>
           <Navbar.Brand>
             <Link to="/" className='navbar-brand d-flex align-items-center'>
@@ -39,8 +78,7 @@ function App() {
               <Nav.Link href='/about' className='text-uppercase'>About us</Nav.Link>
               <Nav.Link href='/blog' className='text-uppercase'>Blog</Nav.Link>
               <Nav.Link href='/contact' className='text-uppercase'>Get in touch</Nav.Link>
-              <Nav.Link href='/register' className='text-uppercase1 border border-danger rounded px-2'>Sign up</Nav.Link>
-              <Nav.Link href='/login' className='text-uppercase1 border border-danger rounded px-2'>Login</Nav.Link>
+              <Nav.Link href='/login' className='text-uppercase '>Login</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -53,7 +91,6 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
       </Routes>
 
       <footer>

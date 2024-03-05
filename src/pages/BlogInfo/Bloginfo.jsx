@@ -1,8 +1,7 @@
 import React from 'react'
 import './infocourses.css'
-import { Link } from 'react-router-dom';
-import { Card } from 'react-bootstrap';
-const InfoCourses = () => {
+
+const Bloginfo = () => {
   return (
     <div className='courses-page'>
         <header className='height-75'>
@@ -16,4 +15,4 @@ const InfoCourses = () => {
   )
 }
 
-export default InfoCourses
+export default Bloginfo

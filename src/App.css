@@ -54,6 +54,7 @@ nav .navbar-toggler:focus {
 
   .navbar .nav-link {
     color: #212529;
+    border: none;
   }
 }
 

@@ -75,7 +75,8 @@ function Blog() {
         <header className='height-75'>
             <div className='container h-100 d-flex flex-column align-items-center justify-content-center text-light'>
                 <h1 className='text-center fw-semibold'>Blog</h1>
-                <p className='text-center w-75 mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas suscipit ratione quod culpa, eius ad consequatur, dolor quasi nulla optio quo error tempora temporibus distinctio quidem asperiores dolore ex amet nam. Consequatur, odit corporis.</p>
+                <p className='text-center w-75 mb-5'>Blogging is an online activity where individuals share their thoughts, ideas, and experiences through written content on a website.
+                It's important for online learning and education because it allows students to engage in reflective practices, develop critical thinking skills, and enhance their communication abilities.</p>
             </div>
         </header>
 
@@ -84,7 +85,7 @@ function Blog() {
                 <div className="row g-4">
                     {blogs.map((blog) => (
                         <div key={blog.id} className='col-md-6 col-lg-4'>
-                            <Link to="/blog" className='text-decoration-none'>
+                            <Link to="/bloginfo" className='text-decoration-none'>
                                 <Card className='h-100 shadow scale-hover-effect bg-dark text-light border-0'>
                                     <Card.Img variant="top" src={blog.img} />
                                     <Card.Body className='p-md-5 d-flex flex-column align-items-center'>

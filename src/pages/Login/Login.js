@@ -1,85 +1,64 @@
 
-import React, { useState } from "react";
-import { Box, Typography, TextField, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-
-
+import React  from "react";
+import * as Components from './Components';
+import './style.css'
 
 const Login = () => {
-    const navigate = useNavigate();
 
-    // State
-    const [inputs, setInputs] = useState({
-    
-        email: "",
-        password: "",
-    });
+const [signIn, toggle] = React.useState(true);
+return( 
+    <div className="login">
+    <Components.Container>
+        <Components.SignUpContainer signinIn={signIn}>
+            <Components.Form>
+                <Components.Title>Create Account</Components.Title>
+                <Components.Input type='text' placeholder='Name' className=""/>
+                <Components.Input type='email' placeholder='Email' />
+                <Components.Input type='password' placeholder='Password' />
+                <Components.Button>Sign Up</Components.Button>
+            </Components.Form>
+        </Components.SignUpContainer>
 
-    // Handle input change
-    const handleChange = (e) => {
-        setInputs((prevState) => ({
-            ...prevState,
-            [e.target.name]: e.target.value,
-        }));
-    };
+        <Components.SignInContainer signinIn={signIn}>
+            <Components.Form>
+                <Components.Title>Sign in</Components.Title>
+                <Components.Input type='email' placeholder='Email' />
+                <Components.Input type='password' placeholder='Password' />
+                <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
+                <Components.Button>Sigin In</Components.Button>
+            </Components.Form>
+        </Components.SignInContainer>
 
-    // Form handle
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            // Your submit logic here
-        } catch (error) {
-            console.log(error);
-        }
-    };
+        <Components.OverlayContainer signinIn={signIn}>
+            <Components.Overlay signinIn={signIn}>
 
-    return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <Box
-                sx ={{Color:'secondary.main'}}
-                    maxWidth={450}
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                    justifyContent="center"
-                    margin="auto"
-                    marginTop={5}
-                    boxShadow="10px 10px 20px #ccc"
-                    padding={3}
-                    borderRadius={5}
-                >
-                    <Typography variant="h4" sx={{ textTransform: "uppercase" }} padding={3} textAlign="center">
-                       Login
-                    </Typography>
-                
-                    <TextField
-                        placeholder="Email"
-                        value={inputs.email}
-                        onChange={handleChange}
-                        name="email"
-                        margin="normal"
-                        type="email"
-                        required
-                    />
-                    <TextField
-                        placeholder="Password"
-                        value={inputs.password}
-                        onChange={handleChange}
-                        name="password"
-                        margin="normal"
-                        type="password"
-                        required
-                        sx ={{Color:'secondary.main'}}
-                    />
-                    <Button type="submit" sx={{ borderRadius: 3, marginTop: 3}} variant="contained" color="primary">
-                        Submit
-                      
-                    </Button>
-                </Box>
-            </form>
-        </>
-    );
+            <Components.LeftOverlayPanel signinIn={signIn}>
+                <Components.Title>Welcome Back!</Components.Title>
+                <Components.Paragraph>
+                    To keep connected with us please login with your personal info
+                </Components.Paragraph>
+                <Components.GhostButton onClick={() => toggle(true)}>
+                    Sign In
+                </Components.GhostButton>
+                </Components.LeftOverlayPanel>
+
+                <Components.RightOverlayPanel signinIn={signIn}>
+                <Components.Title>Hello, Friend!</Components.Title>
+                <Components.Paragraph>
+                    Enter Your personal details and start journey with us
+                </Components.Paragraph>
+                    <Components.GhostButton onClick={() => toggle(false)}>
+                        Sigin Up
+                    </Components.GhostButton> 
+                </Components.RightOverlayPanel>
+
+            </Components.Overlay>
+        </Components.OverlayContainer>
+
+    </Components.Container>
+    </div>
+)
+
 };
 
 export default Login;
