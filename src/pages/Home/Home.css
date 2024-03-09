@@ -12,3 +12,8 @@ header {
     background-size: cover;
     background-position: center;
 }
+.text {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}

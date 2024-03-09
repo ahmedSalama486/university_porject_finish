@@ -5,4 +5,43 @@
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  margin: -20px 0 50px;}
+  margin: -20px 0 50px;
+}
+.login {
+    background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(../../utils/images/home-page-header.jpg);
+}
+.icons{
+position: absolute;
+display:flex;
+top:218px;
+left:83%;
+transform: translateX(-50%);
+}
+.icon{
+position: absolute;
+display:flex;
+top:165px;
+left:83%;
+transform: translateX(-50%);
+}
+.user_icon{
+  position: absolute;
+display:flex;
+top:165px;
+left:83%;
+transform: translateX(-50%)
+}
+.password_signin {
+  position: absolute;
+  display:flex;
+  top:221px;
+  left:83%;
+  transform: translateX(-50%)
+}
+.password {
+  position: absolute;
+  display:flex;
+  top: 272px;;
+  left:83%;
+  transform: translateX(-50%)
+}

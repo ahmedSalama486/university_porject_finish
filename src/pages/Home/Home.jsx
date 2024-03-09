@@ -37,14 +37,14 @@ function Home() {
             <div className='container d-flex flex-column align-items-center'>
                 <h2>Welcome To</h2>
                 <h1 className='text-center fw-semibold'>ThinkThank</h1>
-                <p>Educational digital websites are an effective way to improve the learning process, as these platforms provide educational tools and resources that suit students’ individual needs and abilities.
-                    Thus, students can access educational content at any time and from anywhere, allowing them to learn</p>
+                <p className='w-50 text-center my-5'>Educational digital websites are an effective way to improve the learning process, as these platforms provide educational tools and resources that suit students’ individual needs and abilities.
+                    Thus, students can access educational content at any time and from anywhere, allowing them to learn .</p>
                 <div className='d-flex flex-column flex-sm-row align-items-center'>
                     <Link to="/courses">
-                        <button type='button' className='btn btn-danger btn-lg mx-0 mx-sm-2 my-2 my-sm-0'>Our Courses</button>
+                        <button type='button' className='btn btn-danger  mx-0 mx-sm-2 my-2 my-sm-0 '>Our Courses</button>
                     </Link>
                     <Link to="/contact">
-                        <button type='button' className='btn btn-outline-light btn-lg mx-0 mx-sm-2 my-2 my-sm-0'>Contact Us</button>
+                        <button type='button' className='btn btn-outline-light  mx-0 mx-sm-2 my-2 my-sm-0'>Contact Us</button>
                     </Link>
                 </div>
             </div>
@@ -61,7 +61,7 @@ function Home() {
                         <h2 className='text-capitalize'>2024 start courses</h2>
                         <p>You can get more information about our upcoming courses from the following links.</p>
                         <Link to="/courses">
-                            <button type='button' className='btn btn-danger btn-lg mx-0 mx-sm-2 my-2 my-sm-0'>Learn More</button>
+                            <button type='button' className='btn btn-danger  mx-0 mx-sm-2 my-2 my-sm-0'>Learn More</button>
                         </Link>
                     </div>
                     <div className='col-lg-5 mt-5 mt-lg-0'>
@@ -94,7 +94,7 @@ function Home() {
                     ))}
                 </div>
                 <Link to="/blog">
-                    <button type='button' className='btn btn-danger btn-lg mt-5'>Read More Blogs</button>
+                    <button type='button' className='btn btn-danger  mt-5'>Read More Blogs</button>
                 </Link>
             </div>
         </div>
